@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title></title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -10,15 +12,22 @@
 
   <!-- angular -->
   <script src="https://cdn.jsdelivr.net/angularjs/1.5.0/angular.min.js"></script>
+  <!-- angular animate -->
+  <script src="https://cdn.jsdelivr.net/angularjs/1.5.0/angular-animate.js"></script>
   <!-- ui.bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap.js"></script>
 
   <script src="app.js"></script>
-  <script src="shared/overview/overviewPanel.js"></script>
+  <!-- controllers -->
+  <script src="appCtrl.js" charset="utf-8"></script>
+  <!-- services -->
+  <script src="services/dataSrvc.js" charset="utf-8"></script>
+  <!-- directives -->
+  <script src="shared/accounts/accountsPanel.js"></script>
 
 
 </head>
-<body>
+<body ng-app="financeApp" ng-controller="appCtrl">
   <h1>test</h1>
 </body>
 </html>
