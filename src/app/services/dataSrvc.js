@@ -10,22 +10,23 @@ app.service('dataSrvc', function(){
 
 var accounts = [
   {
-    id:'1',
+    id:'0',
     name: "cash",
     amount: 2401,
   },
   {
-    id:'2',
+    id:'1',
     name: "Credit Cards",
     amount: 2839,
+    available: 5000
   },
   {
-    id:'3',
+    id:'2',
     name: "Bills",
     amount: 1337,
   },
   {
-    id:'4',
+    id:'3',
     name: "Investments",
     amount: 1000003,
   }

@@ -1,7 +1,8 @@
 <li class='acctCard list-group-item'>
   <i class="fa fa-credit-card"></i>
   <div class="acctInfo">
-    <p>{{acct.name}}</p>
+    <small>{{acct.name.toUpperCase()}}</small>
     <p>{{acct.amount | currency}}</p>
   </div>
+  <div ng-if="acct.name === 'Credit Cards'" class="moneyBar"><div id="barFill" ></div></div>
 </li>

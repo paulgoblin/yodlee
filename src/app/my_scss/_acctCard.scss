@@ -1,0 +1,27 @@
+.acctCard {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .acctInfo {
+    display: inline-block;
+    margin-left: 2em;
+  }
+
+  .moneyBar {
+    display: inline-block;
+    height: 2em;
+    width: 50%;
+    float: right;
+    border: 1px solid lightgray;
+    border-radius: $border-radius-base;
+  }
+
+  .barFill {
+
+  }
+
+}

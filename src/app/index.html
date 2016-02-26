@@ -24,13 +24,14 @@
   <script src="shared/navBar/navBar.js"></script>
   <script src="shared/accountsPanel/accountsPanel.js"></script>
   <script src="shared/acctCard/acctCard.js"></script>
+  <script src="shared/summaryPanel/summaryPanel.js"></script>
 
 </head>
 <body ng-app="financeApp" ng-controller="appCtrl" class="container-fullwidth">
   <nav-bar></nav-bar>
   <div class="content">
-    <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(anAcct)"></accounts-panel>
-    <summary-panel></summary-panel>
+    <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(acctId)"></accounts-panel>
+    <summary-panel ng-if="activeAccount" acct="activeAccount" clear-active="clearActive()"></summary-panel>
     <transactions-panel></transactions-panel>
   </div>
 </body>
