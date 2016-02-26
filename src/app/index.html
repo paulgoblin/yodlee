@@ -16,6 +16,9 @@
   <script src="https://cdn.jsdelivr.net/angularjs/1.5.0/angular-touch.js"></script>
   <!-- ui.bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js"></script>
+  <!-- moment -->
+  <script src="libs/moment/moment.js"></script>
+  <script src="libs/angular-moment/angular-moment.min.js"></script>
 
   <script src="app.js"></script>
   <!-- controllers -->
@@ -35,7 +38,7 @@
   <div class="content">
     <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(acctId)"></accounts-panel>
     <summary-panel ng-if="activeAccount" acct="activeAccount" clear-active="clearActive()" detail-clicked="detailClicked(cardId)"></summary-panel>
-    <transactions-panel ng-if="activeDetail" deets="activeDetail"></transactions-panel>
+    <detail-panel ng-if="activeDetail" deets="activeDetail"></detail-panel>
   </div>
 </body>
 </html>

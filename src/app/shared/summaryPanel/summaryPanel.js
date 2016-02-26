@@ -21,4 +21,6 @@ app.controller('summaryPanelCtrl', function($scope){
     return tot + card.balance;
   }, 0);
 
+  console.log("moment", moment(1456462889821).format('l'), moment().format('l'));
+  $scope.due = moment(1456462889821).format('l');
 })

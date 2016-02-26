@@ -4,12 +4,10 @@ app.directive('detailPanel', function(){
   return {
     restrict: 'E',
     replace: true,
+    scope: true,
     controller: 'detailPanelCtrl',
-    scope: {
-      acct: '=',
-      clearActive: '&',
-      detailClicked: '&'
-    },
-    templateUrl:'shared/detailPanel/detailPanel.html',
+    templateUrl:'shared/detailPanel/detailPanel.html'
   }
+})
+app.controller('detailPanelCtrl', function($scope){
 })

@@ -5,8 +5,60 @@ app.service('dataSrvc', function(){
   this.me = me;
   this.accounts = accounts;
   this.cards = cards;
+  this.details = details;
 
 })
+
+var details = [
+  {
+    name: "Bed Bath & Beyond",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Angel Island",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Freshroll",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Lyft",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Ralphs",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Winchels",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Krispy Kreme",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+  {
+    name: "Dunkin Donuts",
+    amount: 283.57,
+    balance: 1756.98,
+    date: 1456527274787
+  },
+]
 
 var cards = [
   {
@@ -18,7 +70,7 @@ var cards = [
     minimum: 0,
     due: 1456462889821,
     updated: 1456462889821,
-    transactions: []
+    transactions: details
   },
   {
     id: "2",
@@ -29,7 +81,7 @@ var cards = [
     minimum: 0,
     due: 1456462889821,
     updated: 1456462889821,
-    transactions: []
+    transactions: details
   },
 ];
 

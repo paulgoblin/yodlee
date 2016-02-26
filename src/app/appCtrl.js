@@ -15,11 +15,11 @@ app.controller('appCtrl', function($scope, dataSrvc){
 
   $scope.detailClicked = function(cardId){
     $scope.activeDetail = $scope.activeAccount.data.find((card) => card.id === cardId);
-    console.log("card clicked", $scope.activeDetail);
   };
 
   $scope.clearActive = function(){
-    $scope.activeAccount = null;
+    if ($scope.activeDetail) return $scope.activeDetail = null;
+    if ($scope.activeAccount) return $scope.activeAccount = null;
     console.log("cleared active", $scope.activeAccount);
   };
 

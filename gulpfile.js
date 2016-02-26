@@ -34,8 +34,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('assets', function() {
-  // gulp.src(dirs.src.lib)
-  //   .pipe(gulp.dest(dirs.out.dist))
+  gulp.src(dirs.src.lib)
+    .pipe(gulp.dest(dirs.out.dist))
 });
 
 gulp.task('html', function(){
