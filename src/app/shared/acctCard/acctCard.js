@@ -1,13 +1,13 @@
 'use strict';
 
-app.directive('accountsPanel', function(){
+app.directive('acctCard', function(){
   return {
     restrict: 'E',
     replace: true,
-    templateUrl:'shared/accountsPanel/accountsPanel.html',
+    templateUrl:'shared/acctCard/acctCard.html',
     scope: {
-      myAccounts: '=',
-      accountClickHandler: '&',
+      acct: '=',
+      clickHandler: '&',
     }
   }
 })

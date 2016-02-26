@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -20,14 +21,15 @@
   <!-- services -->
   <script src="services/dataSrvc.js" charset="utf-8"></script>
   <!-- directives -->
-  <script src="shared/accountsPanel/accountsPanel.js"></script>
   <script src="shared/navBar/navBar.js"></script>
+  <script src="shared/accountsPanel/accountsPanel.js"></script>
+  <script src="shared/acctCard/acctCard.js"></script>
 
 </head>
 <body ng-app="financeApp" ng-controller="appCtrl" class="container-fullwidth">
   <nav-bar></nav-bar>
   <div class="content">
-    <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(aCard)"></accounts-panel>
+    <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(anAcct)"></accounts-panel>
     <summary-panel></summary-panel>
     <transactions-panel></transactions-panel>
   </div>

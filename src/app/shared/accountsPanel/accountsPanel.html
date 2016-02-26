@@ -1,3 +1,5 @@
 <div id="accountsPanel" class="panel">
-  {{myAccounts}}
+  <ul class="accountsList list-group">
+    <acct-card ng-repeat="acct in myAccounts" acct="acct"></acct-card>
+  </ul>
 </div>
