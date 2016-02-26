@@ -2,7 +2,7 @@
   <i class="fa fa-credit-card"></i>
   <div class="acctInfo">
     <small>{{acct.name.toUpperCase()}}</small>
-    <p>{{acct.amount | currency}}</p>
+    <p>{{acct.balance | currency}}</p>
   </div>
-  <div ng-if="acct.name === 'Credit Cards'" class="moneyBar"><div id="barFill" ></div></div>
+  <uib-progressbar ng-if="acct.name === 'Credit Cards'" max="acct.limit" value="acct.balance"></uib-progressbar>
 </li>

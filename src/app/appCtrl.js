@@ -7,12 +7,20 @@ app.controller('appCtrl', function($scope, dataSrvc){
   $scope.cards = dataSrvc.cards;
 
   $scope.activeAccount = null;
+  $scope.activeDetail = null;
 
   $scope.accountClicked = function(acctId){
-    $scope.activeAccount = $scope.accounts[acctId];
-    console.log("acct clicked", $scope.activeAccount);
+    $scope.activeAccount = $scope.accounts.find((acct) => acct.id === acctId);
   };
 
-  $scope.clearActive = function(){ $scope.activeAccount = null; };
+  $scope.detailClicked = function(cardId){
+    $scope.activeDetail = $scope.activeAccount.data.find((card) => card.id === cardId);
+    console.log("card clicked", $scope.activeDetail);
+  };
+
+  $scope.clearActive = function(){
+    $scope.activeAccount = null;
+    console.log("cleared active", $scope.activeAccount);
+  };
 
 })

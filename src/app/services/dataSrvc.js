@@ -8,34 +8,6 @@ app.service('dataSrvc', function(){
 
 })
 
-var accounts = [
-  {
-    id:'0',
-    name: "cash",
-    amount: 2401,
-  },
-  {
-    id:'1',
-    name: "Credit Cards",
-    amount: 2839,
-    available: 5000
-  },
-  {
-    id:'2',
-    name: "Bills",
-    amount: 1337,
-  },
-  {
-    id:'3',
-    name: "Investments",
-    amount: 1000003,
-  }
-];
-
-var me = {
-  name: "Catherine Earnshaw",
-}
-
 var cards = [
   {
     id: "1",
@@ -60,3 +32,35 @@ var cards = [
     transactions: []
   },
 ];
+
+var accounts = [
+  {
+    id:'0',
+    name: "cash",
+    balance: 2401,
+    data: cards
+  },
+  {
+    id:'1',
+    name: "Credit Cards",
+    balance: 2839,
+    limit: 5000,
+    data: cards
+  },
+  {
+    id:'2',
+    name: "Bills",
+    balance: 1337,
+    data: cards
+  },
+  {
+    id:'3',
+    name: "Investments",
+    balance: 1000003,
+    data: cards
+  }
+];
+
+var me = {
+  name: "Catherine Earnshaw",
+}

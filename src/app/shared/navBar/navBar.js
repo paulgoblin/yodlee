@@ -5,5 +5,6 @@ app.directive('navBar', function(){
     restrict: 'E',
     replace: true,
     templateUrl:'shared/navBar/navBar.html',
+    scope: true
   }
 })

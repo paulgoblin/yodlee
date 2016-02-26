@@ -7,11 +7,18 @@ app.directive('summaryPanel', function(){
     controller: 'summaryPanelCtrl',
     scope: {
       acct: '=',
-      clearActive: '&'
+      clearActive: '&',
+      detailClicked: '&'
     },
     templateUrl:'shared/summaryPanel/summaryPanel.html',
   }
 })
 app.controller('summaryPanelCtrl', function($scope){
+  $scope.totalLimit = $scope.acct.data.reduce((tot, card) => {
+    return tot + card.limit;
+  }, 0);
+  $scope.totalBalance = $scope.acct.data.reduce((tot, card) => {
+    return tot + card.balance;
+  }, 0);
 
 })

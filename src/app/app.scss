@@ -4,9 +4,10 @@
 @import "../assets/libs/bootswatch-sass/cosmo/_bootswatch.scss";
 
 $nav-bar-height: 50px;
-
+$background-color: white;
 
 // my scss
 @import "my_scss/global";
 @import "my_scss/navBar";
-@import "my_scss/acctCard"
+@import "my_scss/acctCard";
+@import "my_scss/summaryPanel";

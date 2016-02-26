@@ -2,16 +2,20 @@ body {
   // border: 1px solid red;
 }
 
-.content {
-  width: 100vw;
+.viewPanel {
+  position: absolute;
+  left: 0;
+  right: 0;
   height: calc(100vh - #{$nav-bar-height});
+  background: $background-color;
+  box-shadow: 0px 2px 2px #bbb;
+}
+
+.progress {
+  span {
+    line-height: 1.5em;
+  }
 }
 
 @media (min-width: $screen-md) {
-  .content {
-    padding-left: 1em;
-  }
-  .panel {
-
-  }
 }
