@@ -1,0 +1,17 @@
+body {
+  // border: 1px solid red;
+}
+
+.content {
+  width: 100vw;
+  height: calc(100vh - #{$nav-bar-height});
+}
+
+@media (min-width: $screen-md) {
+  .content {
+    padding-left: 1em;
+  }
+  .panel {
+
+  }
+}

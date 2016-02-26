@@ -1,0 +1,23 @@
+{
+  "name": "yodlee",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "paulgoblin <mpr75@cornell.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/paulgoblin/yodlee",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "bootswatch-sass": "^3.3.1"
+  }
+}

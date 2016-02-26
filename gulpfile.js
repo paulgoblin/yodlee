@@ -6,7 +6,10 @@ var babel = require('gulp-babel');
 
 var dirs = {
   src: {
-    scss: "src/app/app.scss",
+    scss: {
+      entry: "src/app/app.scss",
+      all: "src/app/my_scss/**/*.scss",
+    },
     html: "src/app/**/*.html",
     lib: "src/assets/**/*",
     js: "src/app/**/*.js",
@@ -23,7 +26,7 @@ gulp.task('clean', function(){
 })
 
 gulp.task('sass', function() {
-  gulp.src(dirs.src.scss)
+  gulp.src(dirs.src.scss.entry)
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(minifyCss())
@@ -31,8 +34,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('assets', function() {
-  gulp.src(dirs.src.lib)
-    .pipe(gulp.dest(dirs.out.dist))
+  // gulp.src(dirs.src.lib)
+  //   .pipe(gulp.dest(dirs.out.dist))
 });
 
 gulp.task('html', function(){
@@ -40,7 +43,7 @@ gulp.task('html', function(){
     .pipe(gulp.dest(dirs.out.dist))
 })
 
-gulp.task('build', function(done) {
+gulp.task('build', function() {
   gulp.src(dirs.src.js)
     .pipe(babel({
       presets: ['es2015']
@@ -49,7 +52,7 @@ gulp.task('build', function(done) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(dirs.src.scss, ['sass']);
+  gulp.watch([dirs.src.scss.all, dirs.src.scss.entry], ['sass']);
   gulp.watch(dirs.src.html, ['html']);
   gulp.watch(dirs.src.lib, ['assets']);
   gulp.watch(dirs.src.js, ['build']);

@@ -1,7 +1,9 @@
 'use strict';
 
-let app = angular.module('financeApp');
+app.controller('appCtrl', function($scope, dataSrvc){
 
-app.controller('appCtrl', function(){
+  $scope.me = dataSrvc.me;
+  $scope.accounts = dataSrvc.accounts;
+  $scope.cards = dataSrvc.cards;
 
 })

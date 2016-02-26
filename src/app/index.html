@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
   <link rel="stylesheet" href="app.css">
 
   <!-- angular -->
@@ -23,11 +20,16 @@
   <!-- services -->
   <script src="services/dataSrvc.js" charset="utf-8"></script>
   <!-- directives -->
-  <script src="shared/accounts/accountsPanel.js"></script>
-
+  <script src="shared/accountsPanel/accountsPanel.js"></script>
+  <script src="shared/navBar/navBar.js"></script>
 
 </head>
-<body ng-app="financeApp" ng-controller="appCtrl">
-  <h1>test</h1>
+<body ng-app="financeApp" ng-controller="appCtrl" class="container-fullwidth">
+  <nav-bar></nav-bar>
+  <div class="content">
+    <accounts-panel my-accounts="accounts" account-click-handler="accountClicked(aCard)"></accounts-panel>
+    <summary-panel></summary-panel>
+    <transactions-panel></transactions-panel>
+  </div>
 </body>
 </html>

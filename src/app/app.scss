@@ -1,0 +1,10 @@
+@import "../assets/libs/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "../assets/libs/bootswatch-sass/cosmo/variables";
+@import "../assets/libs/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../assets/libs/bootswatch-sass/cosmo/_bootswatch.scss";
+
+$nav-bar-height: 50px;
+
+// my scss
+@import "my_scss/global";
+@import "my_scss/navBar";
